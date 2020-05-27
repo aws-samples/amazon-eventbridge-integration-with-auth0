@@ -1,0 +1,31 @@
+{
+  "version": "0",
+  "id": "f8543f69-c985-332b-6b62-12345678",
+  "detail-type": "Auth0 log",
+  "source": "aws.partner/auth0.com/exampleAuth0Domain-e5d2-4514-84f2-97dd4ff8aad0/auth0.logs",
+  "account": "1234567890",
+ "time": "2020-04-01T17:04:29Z",
+  "region": "eu-west-1",
+  "resources": [],
+  "detail": {
+    "log_id": "90020200401170424660003667785898636249884327152806002802",
+    "data": {
+      "date": "2020-04-01T17:04:18.860Z",
+      "type": "s",
+      "connection": "github",
+      "connection_id": "con_qwertyuiopasdfghjk",
+      "client_id": "QP19oglIMqRdfghjkrtyuio8",
+      "client_name": "yourClientName",
+      "ip": "111.111.111.111",
+      "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:75.0) Gecko/20100101 Firefox/75.0",
+      "details": {},
+      "hostname": "example.auth0.com",
+      "user_id": "github|1234567",
+      "user_name": "example@example.com",
+      "strategy": "github",
+      "strategy_type": "social",
+      "log_id": "90020200401170424660003667785898636249884327152806002802"
+    }
+  }
+}
+

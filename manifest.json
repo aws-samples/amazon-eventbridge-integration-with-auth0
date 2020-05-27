@@ -1,0 +1,14 @@
+{
+    "fileLocations": [
+        {
+            "URIPrefixes": [
+                "s3://{your-s3-bucket-name}/auth0"
+            ]
+        }
+    ],
+    "globalUploadSettings": {
+        "format": "CSV",
+        "delimiter": ",",
+        "textqualifier": "'"
+    }
+}

@@ -1,0 +1,154 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  Auth0EventBridge
+
+  Sample SAM Template for Auth0EventBridge
+  
+# More info about Globals: https://github.com/awslabs/serverless-application-model/blob/master/docs/globals.rst
+Globals:
+  Function:
+    Timeout: 3
+
+Parameters:
+  Auth0EventBusName:
+    Type: String
+    Description: A valid custom Event Bus for Auth0 Events.
+    MaxLength: 150
+    MinLength: 4
+    AllowedPattern : ".+"
+
+Resources:
+##########################################################################
+#  S3 Bucket                                                             #
+##########################################################################
+  AuthZeroToEventBridgeUserActivitylogs:
+    Type: AWS::S3::Bucket
+##########################################################################
+#  Lambda functions                                                      #
+##########################################################################
+  SaveAuth0EventToS3:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      CodeUri: src/
+      Handler: saveAuth0EventToS3.handler
+      Runtime: nodejs12.x
+      MemorySize: 128
+      Environment:
+        Variables:
+          AuthLogBucket: !Ref AuthZeroToEventBridgeUserActivitylogs
+      Policies:
+        - S3CrudPolicy:
+            BucketName: !Ref AuthZeroToEventBridgeUserActivitylogs
+
+########################################################################
+#   EventBridge Rules                                                    #
+##########################################################################
+
+  SuccessfullSignIn: 
+    Type: AWS::Events::Rule
+    Properties: 
+      Description: "Auth0 User Successfully signed in"
+      EventBusName: 
+         Ref: Auth0EventBusName
+      EventPattern: 
+        account:
+        - !Sub '${AWS::AccountId}'
+        detail:
+          data:
+            type:
+            - s
+      Targets: 
+        - 
+          Arn:
+            Fn::GetAtt:
+              - "SaveAuth0EventToS3" 
+              - "Arn"
+          Id: "SignInSuccessV1"
+  SuccessfullSignUp: 
+    Type: AWS::Events::Rule
+    Properties: 
+      Description: "Auth0 User Successfully signed up"
+      EventBusName: 
+         Ref: Auth0EventBusName
+      EventPattern: 
+        account:
+        - !Sub '${AWS::AccountId}'
+        detail:
+          data:
+            type:
+            - ss
+      Targets: 
+        - 
+          Arn:
+            Fn::GetAtt:
+              - "SaveAuth0EventToS3" 
+              - "Arn"
+          Id: "SignInSuccessV1"
+  SuccessfullSignOutSuccess: 
+    Type: AWS::Events::Rule
+    Properties: 
+      Description: "Auth0 User Successfully signed out"
+      EventBusName: 
+         Ref: Auth0EventBusName
+      EventPattern: 
+        account:
+        - !Sub '${AWS::AccountId}'
+        detail:
+          data:
+            type:
+            - slo
+      Targets: 
+        - 
+          Arn:
+            Fn::GetAtt:
+              - "SaveAuth0EventToS3" 
+              - "Arn"
+          Id: "SignInSuccessV1"
+  SignInFail: 
+    Type: AWS::Events::Rule
+    Properties: 
+      Description: "Auth0 User Signin failed"
+      EventBusName: 
+         Ref: Auth0EventBusName
+      EventPattern: 
+        account:
+        - !Sub '${AWS::AccountId}'
+        detail:
+          data:
+            type:
+            - fp
+            - f
+            - fu
+      Targets: 
+        - 
+          Arn:
+            Fn::GetAtt:
+              - "SaveAuth0EventToS3" 
+              - "Arn"
+          Id: "SignInSuccessV1"
+
+########################################################################
+#   Policies                                                           #
+########################################################################
+  PermissionForEventsToInvokeLambda: 
+    Type: AWS::Lambda::Permission
+    Properties: 
+      FunctionName: 
+        Ref: "SaveAuth0EventToS3"
+      Action: "lambda:InvokeFunction"
+      Principal: "events.amazonaws.com"
+      SourceArn: 
+        Fn::GetAtt: 
+          - "SuccessfullSignIn"
+          - "Arn"
+Outputs:  
+  # ServerlessRestApi is an implicit API created out of Events key under Serverless::Function
+  # Find out more about other implicit resources you can reference within SAM
+  # https://github.com/awslabs/serverless-application-model/blob/master/docs/internals/generated_resources.rst#api
+  SaveAuth0EventToS3:
+    Description: "Save Auth0 Event ToS3  Lambda Function ARN"
+    Value: !GetAtt SaveAuth0EventToS3.Arn
+  AuthZeroToEventBridgeUserActivitylogs:
+    Description: "Auth0 event storage bucket"
+    Value: !Ref AuthZeroToEventBridgeUserActivitylogs
