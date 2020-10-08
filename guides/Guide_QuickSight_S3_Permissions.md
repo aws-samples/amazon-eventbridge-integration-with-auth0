@@ -5,10 +5,10 @@ In this applicaition, you connect QuickSights to Amazon S3 and use the csv files
 
 1.	Choose the user profile icon in the top right of the menu bar, then choose Manage QuickSight.
 2.	Choose Security & permissions, then choose Add or remove.
-![S3 Permissions](https://raw.githubusercontent.com/aws-samples/Auth0EventBridge/master/images/s3Permissions.png "S3 Permissions Dashboard")
+![S3 Permissions](https://raw.githubusercontent.com/aws-samples/amazon-eventbridge-integration-with-auth0/master/images/s3Permissions.png "S3 Permissions Dashboard")
 
 3.	Choose the checkbox next to Amazon S3, then select the application bucket, the name contains AuthZeroToEventBridgeActivityLogs. Choose Finish. 
-![S3 Buckets](https://raw.githubusercontent.com/aws-samples/Auth0EventBridge/master/images/s3Buckets.png "S3 Permissions Dashboard")
+![S3 Buckets](https://raw.githubusercontent.com/aws-samples/amazon-eventbridge-integration-with-auth0/master/images/s3Buckets.png "S3 Permissions Dashboard")
 
 
 ### Create a new Data source
@@ -19,5 +19,5 @@ In this applicaition, you connect QuickSights to Amazon S3 and use the csv files
 1.	Choose the Folder Icon in the Upload a JSON manifest file field, browse to the example manifest.json file you edited earlier and choose Open, then choose Connect.
 1.	Once the dataset has been created, choose Visualize.
 
-![Configure A new S3 dataset for QuickSigts](https://raw.githubusercontent.com/aws-samples/Auth0EventBridge/master/images/NewS3DataSource.png "Configure A new S3 dataset for QuickSigts")
+![Configure A new S3 dataset for QuickSigts](https://raw.githubusercontent.com/aws-samples/amazon-eventbridge-integration-with-auth0/master/images/NewS3DataSource.png "Configure A new S3 dataset for QuickSigts")
 

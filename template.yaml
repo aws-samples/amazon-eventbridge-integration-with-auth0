@@ -1,9 +1,9 @@
 AWSTemplateFormatVersion: '2010-09-09'
 Transform: AWS::Serverless-2016-10-31
 Description: >
-  Auth0EventBridge
+  amazon-eventbridge-integration-with-auth0
 
-  Sample SAM Template for Auth0EventBridge
+  Sample SAM Template for amazon-eventbridge-integration-with-auth0
   
 # More info about Globals: https://github.com/awslabs/serverless-application-model/blob/master/docs/globals.rst
 Globals:

@@ -4,10 +4,10 @@
 ### Example 1
 To build a visual that shows the different user registration channels, drag the connection field onto the visual. Then choose the Pie chart icon from the Visual types section.
 
-![Building an analysis](https://raw.githubusercontent.com/aws-samples/Auth0EventBridge/master/images/analysis1.png "S3 Permissions Dashboard")
+![Building an analysis](https://raw.githubusercontent.com/aws-samples/amazon-eventbridge-integration-with-auth0/master/images/analysis1.png "S3 Permissions Dashboard")
 
 Once there are registrations from multiple channels, your chart looks like this:
-![Pie Chart visual with multiple data points](https://raw.githubusercontent.com/aws-samples/Auth0EventBridge/master/images/piechart.png "S3 Permissions Dashboard")
+![Pie Chart visual with multiple data points](https://raw.githubusercontent.com/aws-samples/amazon-eventbridge-integration-with-auth0/master/images/piechart.png "S3 Permissions Dashboard")
 
 ### Calculated Fields
 You can create additional calculated fields that use functions and operators to analyze or transform field data.  
@@ -19,7 +19,7 @@ Do this to create a separate field for each Auth0 event, e.g.,  successful signu
 3.	Enter countIf(type,type='ss')  in the Formula field.
 This formula calculates the number of values in the type dimension, where type is equal to ss (a successful sign-up).
  
-![Creating calculated fields](https://raw.githubusercontent.com/aws-samples/Auth0EventBridge/master/images/alculatedFields.png "S3 Permissions Dashboard")
+![Creating calculated fields](https://raw.githubusercontent.com/aws-samples/amazon-eventbridge-integration-with-auth0/master/images/alculatedFields.png "S3 Permissions Dashboard")
 
 You can repeat this process for each of the event types that an EventBridge rule was created for:
 
@@ -45,7 +45,7 @@ Add further clarity to this visual by applying some conditional formatting.  Cho
 
 ### Example 3 – comparisons over time 
 This third example shows registrations versus sign-ins over time:
-![Time based comparrisons](https://raw.githubusercontent.com/aws-samples/Auth0EventBridge/master/images/timebasedComparisons.png "Time based comparrisons")
+![Time based comparrisons](https://raw.githubusercontent.com/aws-samples/amazon-eventbridge-integration-with-auth0/master/images/timebasedComparisons.png "Time based comparrisons")
 
 To build this, add a new visual and drag the date, Successful sign in and Registrations fields onto it.
 
