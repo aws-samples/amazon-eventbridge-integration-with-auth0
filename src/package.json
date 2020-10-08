@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Example Integration with Auh0 and Amazon EventBridge",
   "main": "app.js",
-  "repository": "https://github.com/bls20AWS/Amazon-EventBridge-Integration-with-Auth0",
+  "repository": "https://github.com/aws-samples/Amazon-EventBridge-Integration-with-Auth0",
   "author": "Ben smith @ Amazon.com, Inc. or its affiliates",
   "license": "MIT",
   "dependencies": {

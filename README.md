@@ -2,7 +2,7 @@
 
 # Build an Amazon QuickSight dashboard with Auth0 events
 
-![QuickSight Dashboard](https://raw.githubusercontent.com/bls20AWS/Auth0EventBridge/master/images/screenshot.png "QuickSight Dashboard")
+![QuickSight Dashboard](https://raw.githubusercontent.com/aws-samples/Auth0EventBridge/master/images/screenshot.png "QuickSight Dashboard")
 
 
 # Auth0EventBridge
@@ -49,9 +49,9 @@ Follow the prompts in the deploy process to set the stack name, AWS Region and o
 
 Before building your first visual you must:
 
-:white_check_mark: Ensure that QuickSight has permission to access your S3 bucket. [Show me how](https://github.com/bls20AWS/Auth0EventBridge/blob/master/guides/Guide_QuickSight_S3_Permissions.md#granting-quicksight-permission-to-access-your-s3-bucket "QuickSight has permission to access your S3 bucket").
+:white_check_mark: Ensure that QuickSight has permission to access your S3 bucket. [Show me how](https://github.com/aws-samples/Auth0EventBridge/blob/master/guides/Guide_QuickSight_S3_Permissions.md#granting-quicksight-permission-to-access-your-s3-bucket "QuickSight has permission to access your S3 bucket").
 
-:white_check_mark: Create a new Data source. [Show me how](https://github.com/bls20AWS/Auth0EventBridge/blob/master/guides/Guide_QuickSight_S3_Permissions.md#creting-a-new-data-source "QuickSight has permission to access your S3 bucket").
+:white_check_mark: Create a new Data source. [Show me how](https://github.com/aws-samples/Auth0EventBridge/blob/master/guides/Guide_QuickSight_S3_Permissions.md#creting-a-new-data-source "QuickSight has permission to access your S3 bucket").
 
 
 ## Creating visuals
@@ -60,22 +60,22 @@ Before building your first visual you must:
 
 This visual enables you to understand your users’ preferred mechanism to log into your application.
 
-![Pie Chart visual with multiple data points](https://raw.githubusercontent.com/bls20AWS/Auth0EventBridge/master/images/piechart.png "S3 Permissions Dashboard")
-[Show me how to build this](https://github.com/bls20AWS/Auth0EventBridge/blob/master/guides/Guide_QuickSight_Visuals#Example-1 "QuickSight Visuals").
+![Pie Chart visual with multiple data points](https://raw.githubusercontent.com/aws-samples/Auth0EventBridge/master/images/piechart.png "S3 Permissions Dashboard")
+[Show me how to build this](https://github.com/aws-samples/Auth0EventBridge/blob/master/guides/Guide_QuickSight_Visuals#Example-1 "QuickSight Visuals").
 
-:white_check_mark: Tip: Use calculated fields to build more complex visuals [Show me how](https://github.com/bls20AWS/Auth0EventBridge/blob/master/guides/Guide_QuickSight_Visuals#Calculated-Fields "QuickSight Visuals").
+:white_check_mark: Tip: Use calculated fields to build more complex visuals [Show me how](https://github.com/aws-samples/Auth0EventBridge/blob/master/guides/Guide_QuickSight_Visuals#Calculated-Fields "QuickSight Visuals").
 
 
 ### Example 2 - trends
 You can use this type of visual to show the trend in unsuccessful sign-ins, which could signify a problem with a recent UX release or user database connect.
 
-![Trends with conditional formatting](https://raw.githubusercontent.com/bls20AWS/Auth0EventBridge/master/images/trends.png "Trends with conditional formatting")
+![Trends with conditional formatting](https://raw.githubusercontent.com/aws-samples/Auth0EventBridge/master/images/trends.png "Trends with conditional formatting")
 
-[Show me how to build this](https://github.com/bls20AWS/Auth0EventBridge/blob/master/guides/Guide_QuickSight_Visuals#Example-2 "QuickSight Visuals").
+[Show me how to build this](https://github.com/aws-samples/Auth0EventBridge/blob/master/guides/Guide_QuickSight_Visuals#Example-2 "QuickSight Visuals").
 
 
 ### Example 3 – comparisons over time 
 This third example shows registrations versus sign-ins over time:
-![Time based comparrisons](https://raw.githubusercontent.com/bls20AWS/Auth0EventBridge/master/images/timebasedComparisons.png "Time based comparrisons")
+![Time based comparrisons](https://raw.githubusercontent.com/aws-samples/Auth0EventBridge/master/images/timebasedComparisons.png "Time based comparrisons")
  
-[Show me how to build this](https://github.com/bls20AWS/Auth0EventBridge/blob/master/guides/Guide_QuickSight_Visuals#Example-3 "QuickSight Visuals").
+[Show me how to build this](https://github.com/aws-samples/Auth0EventBridge/blob/master/guides/Guide_QuickSight_Visuals#Example-3 "QuickSight Visuals").
