@@ -7,7 +7,7 @@
   "author": "Ben smith @ Amazon.com, Inc. or its affiliates",
   "license": "MIT",
   "dependencies": {
-    "axios": "^0.18.0"
+    "axios": ">=0.21.1"
   },
   "scripts": {
     "test": "mocha tests/unit/"
