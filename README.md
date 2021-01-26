@@ -61,7 +61,7 @@ Before building your first visual you must:
 This visual enables you to understand your users’ preferred mechanism to log into your application.
 
 ![Pie Chart visual with multiple data points](https://raw.githubusercontent.com/aws-samples/amazon-eventbridge-integration-with-auth0/master/images/piechart.png "S3 Permissions Dashboard")
-[Show me how to build this](/guides/Guide_QuickSight_Visuals#Example-1 "QuickSight Visuals").
+[Show me how to build this](https://github.com/aws-samples/amazon-eventbridge-integration-with-auth0/blob/master/guides/Guide_QuickSight_Visuals#Example-1 "QuickSight Visuals").
 
 :white_check_mark: Tip: Use calculated fields to build more complex visuals [Show me how](https://github.com/aws-samples/amazon-eventbridge-integration-with-auth0/blob/master/guides/Guide_QuickSight_Visuals#Calculated-Fields "QuickSight Visuals").
 
@@ -71,11 +71,11 @@ You can use this type of visual to show the trend in unsuccessful sign-ins, whic
 
 ![Trends with conditional formatting](https://raw.githubusercontent.com/aws-samples/amazon-eventbridge-integration-with-auth0/master/images/trends.png "Trends with conditional formatting")
 
-[Show me how to build this](/guides/Guide_QuickSight_Visuals#Example-2 "QuickSight Visuals").
+[Show me how to build this](https://github.com/aws-samples/amazon-eventbridge-integration-with-auth0/blob/master/guides/Guide_QuickSight_Visuals#Example-2 "QuickSight Visuals").
 
 
 ### Example 3 – comparisons over time 
 This third example shows registrations versus sign-ins over time:
 ![Time based comparrisons](https://raw.githubusercontent.com/aws-samples/amazon-eventbridge-integration-with-auth0/master/images/timebasedComparisons.png "Time based comparrisons")
  
-[Show me how to build this](/guides/Guide_QuickSight_Visuals#Example-3 "QuickSight Visuals").
+[Show me how to build this](https://github.com/aws-samples/amazon-eventbridge-integration-with-auth0/blob/master/guides/Guide_QuickSight_Visuals#Example-3 "QuickSight Visuals").
