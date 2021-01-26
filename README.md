@@ -2,7 +2,7 @@
 
 # Build an Amazon QuickSight dashboard with Auth0 events
 
-![QuickSight Dashboard](/aws-samples/amazon-eventbridge-integration-with-auth0/images/screenshot.png "QuickSight Dashboard")
+![QuickSight Dashboard](/images/screenshot.png "QuickSight Dashboard")
 
 
 # amazon-eventbridge-integration-with-auth0
