@@ -7,13 +7,13 @@
   "author": "Ben smith @ Amazon.com, Inc. or its affiliates",
   "license": "MIT",
   "dependencies": {
-    "axios": ">=0.21.1"
+    "axios": ">=1.12.2"
   },
   "scripts": {
     "test": "mocha tests/unit/"
   },
   "devDependencies": {
-    "chai": "^4.2.0",
-    "mocha": "^6.1.4"
+    "chai": "^6.0.1",
+    "mocha": "^11.7.2"
   }
 }
